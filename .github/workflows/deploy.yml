@@ -1,0 +1,53 @@
+name: Deploy static site to AWS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Upload to S3 and invalidate CloudFront
+    runs-on: ubuntu-latest
+    env:
+      AWS_REGION: us-east-1
+      AWS_ROLE_ARN: arn:aws:iam::167898699288:role/GitHubDeployRole
+      S3_BUCKET: jvktech-site
+      CLOUDFRONT_DISTRIBUTION_ID: E3JPGRYROLPTW0
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Upload website files to S3
+        run: |
+          aws s3 sync . "s3://${{ env.S3_BUCKET }}" --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude ".gitignore" \
+            --exclude ".server.pid" \
+            --exclude "screenshots/*" \
+            --exclude "README.md" \
+            --exclude "docs/*" \
+            --exclude "CNAME"
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ env.CLOUDFRONT_DISTRIBUTION_ID }}" \
+            --paths "/*"
