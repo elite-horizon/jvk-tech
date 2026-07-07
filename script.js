@@ -1,3 +1,5 @@
+/* JVK Technologies — Minimal interaction layer */
+
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 
@@ -9,26 +11,12 @@ if (navToggle && siteNav) {
   });
 }
 
-const revealItems = document.querySelectorAll(".reveal");
+/* Reveal — mark all visible immediately (no scroll animation) */
+document.querySelectorAll(".reveal").forEach((el) => {
+  el.classList.add("is-visible");
+});
 
-if ("IntersectionObserver" in window && revealItems.length) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.16 }
-  );
-
-  revealItems.forEach((item) => observer.observe(item));
-} else {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
-}
-
+/* Contact form */
 const contactForm = document.querySelector("#contact-form");
 
 if (contactForm) {
