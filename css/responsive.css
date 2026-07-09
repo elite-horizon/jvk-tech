@@ -1,0 +1,263 @@
+/* =========================================================
+   RESPONSIVE — LUXURY EDITION
+   Breakpoints:
+     1200px — large desktop down
+     1024px — laptop / small desktop
+     860px  — tablet
+     640px  — mobile
+     480px  — small mobile
+   ========================================================= */
+
+/* ---------- 1200px — large desktop ---------- */
+@media (max-width: 1200px) {
+  .mega-inner { grid-template-columns: 1fr 1fr 1.2fr; }
+  .mega-col:nth-child(3) { display: none; }
+  .service-item { grid-template-columns: 60px 1fr 260px; gap: 32px; }
+  .service-index span { font-size: 52px; }
+}
+
+/* ---------- 1024px — laptop ---------- */
+@media (max-width: 1024px) {
+  :root { --gutter: clamp(24px, 4vw, 48px); }
+
+  .header-cta { margin-left: auto; }
+  .header-cta .btn { display: none; }
+  .primary-nav { flex: initial; }
+
+  .hero-title { font-size: clamp(34px, 6vw, 68px); }
+
+  .about-grid { grid-template-columns: 1fr; gap: 60px; }
+  .about-visual { max-width: 560px; margin: 0 auto; }
+
+  .service-item,
+  .service-item.service-reverse {
+    grid-template-columns: 56px 1fr;
+    gap: 24px;
+  }
+  .service-plate { display: none; }
+  .service-reverse .service-content { order: 1; }
+  .service-reverse .service-index { order: 0; }
+  .service-index span { font-size: 44px; }
+
+  .why-grid { grid-template-columns: 1fr; gap: 48px; }
+  .why-sticky { position: static; }
+
+  .work-head { grid-template-columns: 1fr; gap: 24px; }
+  .work-grid { grid-template-columns: repeat(6, 1fr); }
+  .work-card,
+  .work-card-feature,
+  .work-card-wide { grid-column: span 6; }
+
+  .process-steps { grid-template-columns: 1fr; gap: 56px; }
+  .process-rail {
+    top: 0; bottom: 0;
+    left: 36px; right: auto;
+    width: 1px; height: auto;
+  }
+  .process-step { text-align: left; padding-left: 80px; }
+  .process-marker {
+    position: absolute;
+    left: 0; top: 0;
+    margin: 0;
+  }
+  .process-body p { margin: 0; max-width: 460px; }
+
+  .engagements-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+
+  .faq-grid { grid-template-columns: 1fr; gap: 40px; }
+  .faq-aside { position: static; }
+
+  .journal-grid { grid-template-columns: 1fr 1fr; }
+
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .contact-aside { position: static; max-width: 560px; }
+
+  .footer-top { grid-template-columns: 1fr; gap: 48px; }
+}
+
+/* ---------- 860px — tablet ---------- */
+@media (max-width: 860px) {
+  .primary-nav { display: none; }
+  .menu-toggle { display: flex; }
+  .header-cta { margin-left: auto; }
+  .header-cta .btn { display: none; }
+
+  .hero {
+    min-height: auto;
+    padding: 130px var(--gutter) 80px;
+  }
+
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 36px 24px; }
+  .stat:nth-child(2)::after { display: none; }
+  .stat:nth-child(2) { padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+  .stat:nth-child(3) { padding-top: 24px; }
+
+  .quote-slider { max-width: 100%; }
+  .quote-text { font-size: clamp(20px, 4vw, 28px); }
+
+  .journal-grid { grid-template-columns: 1fr; }
+
+  .footer-cols { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- 640px — mobile ---------- */
+@media (max-width: 640px) {
+  :root { --gutter: 20px; }
+
+  .container { padding-left: 20px; padding-right: 20px; }
+
+  .display-heading { font-size: clamp(28px, 7vw, 42px); }
+
+  .hero-title { font-size: clamp(32px, 9vw, 46px); }
+  .hero-copy { font-size: 16px; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+
+  .btn { padding: 14px 22px; font-size: 11.5px; }
+
+  .about-image-overlay {
+    position: static;
+    margin: 24px 0 0;
+  }
+
+  .service-item,
+  .service-item.service-reverse {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 0;
+  }
+  .service-index span { font-size: 40px; }
+  .service-content { max-width: none; justify-self: start; }
+
+  .work-body { padding: 22px; }
+  .work-body h3 { font-size: 21px; }
+
+  .process-marker { width: 56px; height: 56px; }
+  .process-marker span { font-size: 16px; }
+  .process-step { padding-left: 72px; }
+
+  .stats-grid { grid-template-columns: 1fr; gap: 32px; }
+  .stat:not(:last-child)::after { display: none; }
+  .stat:not(:last-child) {
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .stat:nth-child(3) { padding-top: 0; }
+
+  .quote-controls { gap: 16px; }
+  .quote-mark { font-size: 64px; }
+
+  .tier { padding: 32px 24px; }
+  .tier h3 { font-size: 26px; }
+
+  .faq-question { padding: 20px; font-size: 17px; }
+  .faq-answer p { padding: 0 20px 22px; }
+
+  .journal-card { padding: 28px 24px; }
+  .journal-body h3 { font-size: 22px; }
+
+  .contact-card, .newsletter { padding: 28px 24px; }
+
+  .footer-top { padding-bottom: 48px; }
+  .footer-cols { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+/* ---------- 480px — small mobile ---------- */
+@media (max-width: 480px) {
+  .brand-text { display: none; }
+  .hero { padding: 110px 20px 60px; }
+  .hero-title { font-size: clamp(28px, 10vw, 38px); }
+  .display-heading { font-size: clamp(24px, 8vw, 34px); }
+
+  .quote-text { font-size: 19px; }
+  .stat-num { font-size: 44px; }
+}
+
+/* ---------- Touch device animations handling ---------- */
+@media (hover: none), (pointer: coarse) {
+  [data-magnetic] { transform: none !important; }
+  .hero-image { transform: none !important; }
+  [data-parallax] { transform: none !important; }
+}
+
+/* ---------- Print ---------- */
+@media print {
+  .site-header,
+  .mobile-menu,
+  .scroll-progress,
+  .page-loader,
+  .credentials,
+  .quote-controls,
+  .back-to-top,
+  .footer-social { display: none !important; }
+  .hero { min-height: auto; }
+  .hero-media, .hero-overlay, .hero-grain { display: none; }
+  .hero-content { color: var(--ink); }
+  .hero-title, .hero-copy { color: var(--ink); }
+}
+
+/* =========================================================
+   MULTI-PAGE — Responsive rules for new sections
+   ========================================================= */
+
+/* ---------- 1024px — laptop ---------- */
+@media (max-width: 1024px) {
+  .story-grid { grid-template-columns: 1fr; gap: 60px; }
+  .story-visual { max-width: 560px; margin: 0 auto; }
+  .story-quote { right: 16px; bottom: -24px; }
+
+  .mv-grid { grid-template-columns: 1fr; }
+
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .office-grid { grid-template-columns: 1fr; }
+
+  .privacy-grid { grid-template-columns: 1fr; gap: 40px; }
+  .privacy-toc { position: static; }
+  .privacy-toc ul { flex-direction: row; flex-wrap: wrap; gap: 8px 16px; }
+  .privacy-toc a { border-left: none; border-bottom: 1px solid var(--border); padding: 6px 0; }
+}
+
+/* ---------- 860px — tablet ---------- */
+@media (max-width: 860px) {
+  .page-hero { padding: 150px 0 80px; }
+  .page-hero-title { font-size: clamp(36px, 8vw, 56px); }
+
+  .team-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- 640px — mobile ---------- */
+@media (max-width: 640px) {
+  .story-quote { position: static; max-width: none; margin-top: 24px; }
+
+  .mv-card { padding: 32px 28px; }
+  .mv-card h3 { font-size: 24px; }
+
+  .journey-list { padding-left: 56px; }
+  .journey-list::before { left: 21px; }
+  .journey-marker { left: -56px; width: 48px; height: 48px; font-size: 14px; }
+
+  .team-grid { grid-template-columns: 1fr; max-width: 360px; margin-left: auto; margin-right: auto; }
+
+  .office-card { padding: 32px 28px; }
+
+  .privacy-block h2 { font-size: 22px; }
+  .privacy-block p { font-size: 15px; }
+
+  .error-code { font-size: clamp(80px, 24vw, 140px); }
+  .error-illustration { width: 120px; height: 120px; }
+  .error-illustration .orbit-1 { width: 120px; height: 120px; }
+  .error-illustration .orbit-2 { width: 80px; height: 80px; }
+  .error-illustration .core { font-size: 40px; }
+  .error-illustration .dot-1 { transform: translate(60px, -4px); }
+  .error-illustration .dot-2 { transform: translate(-40px, -4px); }
+}
+
+/* ---------- 480px — small mobile ---------- */
+@media (max-width: 480px) {
+  .page-hero { padding: 130px 0 60px; }
+  .page-hero-title { font-size: clamp(32px, 10vw, 44px); }
+
+  .cta-band-title { font-size: clamp(28px, 8vw, 40px); }
+}

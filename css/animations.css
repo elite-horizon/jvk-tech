@@ -1,0 +1,161 @@
+/* =========================================================
+   ANIMATIONS — LUXURY EDITION
+   Keyframes, page loader, reveal states, parallax helpers
+   All handcrafted · No animation libraries
+   ========================================================= */
+
+/* ---------- 1. PAGE LOADER ---------- */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg);
+  display: grid;
+  place-items: center;
+  transition: opacity 0.8s var(--ease), visibility 0.8s;
+}
+.page-loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.loader-mark {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+.loader-line {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  transform: translate(-50%, -50%);
+}
+.loader-line:nth-child(1) {
+  animation: loader-spin-1 1.4s var(--ease) infinite;
+}
+.loader-line:nth-child(2) {
+  animation: loader-spin-2 1.4s var(--ease) infinite;
+}
+@keyframes loader-spin-1 {
+  0%   { transform: translate(-50%, -50%) rotate(0deg); width: 48px; opacity: 1; }
+  50%  { width: 4px; opacity: 0.4; }
+  100% { transform: translate(-50%, -50%) rotate(360deg); width: 48px; opacity: 1; }
+}
+@keyframes loader-spin-2 {
+  0%   { transform: translate(-50%, -50%) rotate(90deg); width: 4px; opacity: 0.4; }
+  50%  { width: 48px; opacity: 1; }
+  100% { transform: translate(-50%, -50%) rotate(450deg); width: 4px; opacity: 0.4; }
+}
+.loader-text {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  opacity: 0;
+  animation: loader-fade 1.4s var(--ease) 0.3s forwards;
+}
+@keyframes loader-fade {
+  to { opacity: 1; }
+}
+
+/* ---------- 2. REVEAL STATES ---------- */
+/* Default hidden — JS adds .is-visible */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 1s var(--ease-out),
+              transform 1s var(--ease-out);
+  will-change: opacity, transform;
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* Hero title line reveal — used by JS on load */
+.title-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.15em; 
+  margin-bottom: -0.15em;
+}
+.title-line > span,
+.title-line {
+  /* Inner span injected by JS for the reveal */
+}
+.title-line .reveal-inner {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 1.1s var(--ease-lux);
+  will-change: transform;
+}
+.title-line.is-revealed .reveal-inner {
+  transform: translateY(0);
+}
+
+/* Hero eyebrow / copy / actions — fade up on load */
+.hero-eyebrow,
+.hero-copy,
+.hero-actions {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
+}
+.hero-eyebrow.is-revealed,
+.hero-copy.is-revealed,
+.hero-actions.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- 3. PARALLAX (applied by JS via transform) ---------- */
+[data-parallax] {
+  will-change: transform;
+}
+
+/* ---------- 5. MAGNETIC BUTTONS ---------- */
+[data-magnetic] {
+  will-change: transform;
+  transition: transform 0.4s var(--ease);
+}
+
+/* ---------- 6. CARD LIFT (generic hover) ---------- */
+.work-card,
+.tier,
+.journal-card,
+.why-card {
+  will-change: transform;
+}
+
+/* ---------- 7. MARQUEE (credentials strip) ---------- */
+/* Defined in style.css */
+
+/* ---------- 8. ACCORDION ICON ROTATION ---------- */
+/* Defined in style.css (.faq-icon) */
+
+/* ---------- 9. REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal-image],
+  .hero-eyebrow,
+  .hero-copy,
+  .hero-actions,
+  .title-line .reveal-inner {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+  .page-loader { display: none; }
+}
