@@ -949,6 +949,9 @@ input, textarea, select { font: inherit; color: inherit; }
   padding: 6px 12px;
   border-radius: 999px;
 }
+[data-theme="dark"] .plate-tag {
+  background: rgba(15, 15, 15, 0.85);
+}
 
 /* Reverse layout */
 .service-reverse { grid-template-columns: 320px 1fr 80px; }
@@ -1087,6 +1090,9 @@ input, textarea, select { font: inherit; color: inherit; }
   text-transform: uppercase;
   padding: 6px 12px;
   border-radius: 999px;
+}
+[data-theme="dark"] .work-tag {
+  background: rgba(15, 15, 15, 0.85);
 }
 .work-body {
   padding: 28px 28px 32px;
