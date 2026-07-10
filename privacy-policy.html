@@ -3,61 +3,358 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Terms and Privacy | JVK Technologies</title>
-    <meta name="description" content="Terms, service conditions, data protection and contact details for JVK Technologies.">
+    <title>Privacy Policy | JVK Technologies</title>
+    <meta name="description" content="Privacy policy and terms for JVK Technologies — how we collect, use, and protect client information for research, publication, IP and technical services.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="JVK Technologies">
     <link rel="canonical" href="https://jvktech.com/privacy-policy.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="JVK Technologies">
-    <meta property="og:title" content="Terms and Privacy | JVK Technologies">
-    <meta property="og:description" content="Read JVK Technologies service terms, data protection notes, refund conditions and contact details.">
+    <meta property="og:title" content="Privacy Policy | JVK Technologies">
+    <meta property="og:description" content="Read JVK Technologies privacy policy — information collection, cookies, data usage, user rights and contact details.">
     <meta property="og:url" content="https://jvktech.com/privacy-policy.html">
-    <meta property="og:image" content="https://jvktech.com/assets/jvk-logo.png">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Terms and Privacy | JVK Technologies">
-    <meta name="twitter:description" content="Service terms and privacy information for JVK Technologies.">
-    <meta name="twitter:image" content="https://jvktech.com/assets/jvk-logo.png">
+    <meta property="og:image" content="https://jvktech.com/images/marble-1.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy | JVK Technologies">
+    <meta name="twitter:description" content="How JVK Technologies collects, uses and protects client information.">
+    <meta name="twitter:image" content="https://jvktech.com/images/marble-1.jpg">
     <link rel="icon" href="assets/jvk-logo.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script>!function(){var t=localStorage.getItem('jvk-theme')||'system';var e=t==='system'?(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'):t;document.documentElement.setAttribute('data-theme',e)}()</script>
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="index.html"><img src="assets/jvk-logo.png" alt="JVK Technologies logo"><span>JVK Technologies</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
-      <nav class="site-nav" id="site-nav">
-        <a href="index.html">Home</a><a href="about.html">About</a><a href="privacy-policy.html" aria-current="page">Terms</a><a class="nav-cta" href="contact.html">Contact</a>
-      </nav>
+
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+      <div class="loader-inner"><div class="loader-mark"><span class="loader-line"></span><span class="loader-line"></span></div><p class="loader-text">JVK Technologies</p></div>
+    </div>
+
+
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <header class="site-header" id="siteHeader">
+      <div class="header-inner">
+        <a href="index.html" class="brand" aria-label="JVK Technologies home" data-magnetic>
+          <span class="brand-mark"><img src="assets/jvk-logo.png" alt="JVK Technologies" width="28" height="28"></span>
+          <span class="brand-text"><span class="brand-name">JVK</span><span class="brand-sub">Technologies</span></span>
+        </a>
+        <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link" data-navlink>Home<span class="nav-underline"></span></a></li>
+            <li class="has-mega">
+              <a href="index.html#services" class="nav-link" data-navlink>Services<span class="nav-underline"></span></a>
+              <div class="mega-menu" aria-hidden="true">
+                <div class="mega-inner">
+                  <div class="mega-col">
+                    <p class="mega-label">Academic</p>
+                    <a href="index.html#services" class="mega-item"><span class="mega-num">01</span><span class="mega-name">Paper Publications</span></a>
+                    <a href="index.html#services" class="mega-item"><span class="mega-num">02</span><span class="mega-name">Thesis &amp; PhD</span></a>
+                    <a href="index.html#services" class="mega-item"><span class="mega-num">03</span><span class="mega-name">Books &amp; E-Publishing</span></a>
+                  </div>
+                  <div class="mega-col">
+                    <p class="mega-label">Intellectual Property</p>
+                    <a href="index.html#services" class="mega-item"><span class="mega-num">04</span><span class="mega-name">Patent Publication</span></a>
+                    <a href="index.html#services" class="mega-item"><span class="mega-num">05</span><span class="mega-name">Copyrights</span></a>
+                  </div>
+                  <div class="mega-col">
+                    <p class="mega-label">Technology</p>
+                    <a href="index.html#services" class="mega-item"><span class="mega-num">06</span><span class="mega-name">Web, Hosting &amp; Internships</span></a>
+                  </div>
+                  <div class="mega-cta">
+                    <p class="mega-cta-label">Begin a conversation</p>
+                    <a href="contact.html" class="mega-cta-link">Start a consultation<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="about.html" class="nav-link" data-navlink>About<span class="nav-underline"></span></a></li>
+            <li><a href="contact.html" class="nav-link" data-navlink>Contact<span class="nav-underline"></span></a></li>
+            <li><a href="privacy-policy.html" class="nav-link" data-navlink aria-current="page">Privacy<span class="nav-underline"></span></a></li>
+          </ul>
+        </nav>
+        <div class="header-cta">
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            <svg class="icon-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </button>
+          <a href="contact.html" class="btn btn-gold btn-magnetic" data-magnetic><span>Enquire</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu"><span></span><span></span></button>
+      </div>
     </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <nav class="mobile-nav" aria-label="Mobile">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="index.html#services">Services</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="contact.html" class="mobile-cta">Enquire</a>
+        </nav>
+        <div class="mobile-meta">
+          <a href="mailto:admin@jvktech.com">admin@jvktech.com</a>
+          <a href="tel:+918500580495">+91 8500580495</a>
+          <p>Gudivada, Andhra Pradesh, India</p>
+        </div>
+      </div>
+    </div>
+
     <main>
+
+      <!-- ============== PAGE HERO ============== -->
       <section class="page-hero">
-        <p class="eyebrow">Terms and privacy</p>
-        <h1 class = "head">Service terms for JVK Technologies.</h1>
-        <p>These terms summarize how JVK Technologies provides research, publication, patent, copyright, plagiarism checking and academic support services.</p>
+        <div class="page-hero-media">
+          <img src="images/marble-1.jpg" alt="Privacy and confidentiality" data-parallax="0.12">
+          <div class="page-hero-overlay"></div>
+        </div>
+        <div class="page-hero-content">
+          <p class="page-hero-eyebrow" data-reveal>
+            <span class="eyebrow-line"></span>
+            Privacy Policy
+          </p>
+          <h1 class="page-hero-title" data-reveal>
+            How we handle<br>
+            <em>your information.</em>
+          </h1>
+          <p class="page-hero-lead" data-reveal>
+            JVK Technologies handles client information carefully and privately. This policy summarizes what we collect, how we use it, and the rights you have over your data.
+          </p>
+        </div>
       </section>
-      <section class="section legal">
-        <h2>Acceptance of terms</h2>
-        <p>By accessing this website or engaging JVK Technologies for services, you confirm that you are at least 18 years old or have legal authority to agree to these terms.</p>
-        <h2>Services and delivery</h2>
-        <p>Services, deliverables, timelines and fees are agreed before work begins. Clients must provide accurate and timely information. Reasonable revisions may be included according to the agreed scope; additional revisions can require extra fees.</p>
-        <h2>Intellectual property</h2>
-        <p>JVK Technologies retains ownership of proprietary methods and materials. Client-specific deliverables belong to the client after full payment unless a written agreement states otherwise. Clients must ensure that materials they provide do not infringe third-party rights.</p>
-        <h2>Data protection</h2>
-        <p>JVK Technologies handles client information for service delivery and communication. The business aims to follow applicable Indian data protection rules, including the IT Act 2000 and Digital Personal Data Protection Act 2023, and relevant privacy obligations for international clients where applicable.</p>
-        <h2>Payments and refunds</h2>
-        <p>Fees are agreed before work begins and are exclusive of taxes unless specified. Completed work is not normally refundable, though partial refunds may be reviewed at the discretion of JVK Technologies.</p>
-        <h2>Limitation of liability</h2>
-        <p>JVK Technologies is not responsible for delays or outcomes controlled by third parties, including journals, patent offices or admission bodies. Liability is limited to the amount paid for the specific service, except where liability cannot be excluded under law.</p>
-        <h2>Disputes and governing law</h2>
-        <p>Disputes are governed by Indian law. Arbitration, where required, will be handled in Gudivada, Andhra Pradesh, India under applicable arbitration law.</p>
-        <h2>Contact</h2>
-        <p>For questions about these terms, contact <a href="mailto:admin@jvktech.com">admin@jvktech.com</a> or <a href="mailto:jvktechno@gmail.com">jvktechno@gmail.com</a>.</p>
+
+      <!-- ============== PRIVACY CONTENT ============== -->
+      <section class="privacy">
+        <div class="container">
+          <div class="privacy-grid">
+
+            <!-- Sticky table of contents -->
+            <aside class="privacy-toc" data-reveal>
+              <p class="privacy-toc-label">On this page</p>
+              <ul>
+                <li><a href="#section-1">Privacy Policy</a></li>
+                <li><a href="#section-2">Information Collection</a></li>
+                <li><a href="#section-3">Cookies</a></li>
+                <li><a href="#section-4">Data Usage</a></li>
+                <li><a href="#section-5">User Rights</a></li>
+                <li><a href="#section-6">Data Protection</a></li>
+                <li><a href="#section-7">Terms</a></li>
+                <li><a href="#section-8">Contact</a></li>
+              </ul>
+            </aside>
+
+            <!-- Content blocks -->
+            <div class="privacy-content">
+
+              <article class="privacy-block" id="section-1" data-reveal>
+                <span class="privacy-block-num">N° 01</span>
+                <h2>Privacy Policy</h2>
+                <p>JVK Technologies is committed to protecting the privacy of scholars, researchers, students, authors, creators and small businesses who use our research, publication, patent, copyright, thesis, e-publishing, web hosting and technical training services.</p>
+                <p>This policy describes what information we collect, how we use it, who has access to it, and the choices you have. By engaging JVK Technologies for services or contacting us through this website, you agree to the practices described in this policy.</p>
+                <p>The business aims to follow applicable Indian data protection rules, including the IT Act 2000 and Digital Personal Data Protection Act 2023, and relevant privacy obligations for international clients where applicable.</p>
+              </article>
+
+              <article class="privacy-block" id="section-2" data-reveal>
+                <span class="privacy-block-num">N° 02</span>
+                <h2>Information Collection</h2>
+                <p>We collect information that you provide directly to us when you enquire about services, engage us for work, or correspond with our team. This may include:</p>
+                <ul>
+                  <li>Your name, email address and phone number</li>
+                  <li>Subject area, deadline and current stage of your work</li>
+                  <li>Drafts, manuscripts, invention notes, academic files and supporting documents you share</li>
+                  <li>Billing and payment information required for service agreements</li>
+                  <li>Communication history — emails, messages and meeting notes</li>
+                </ul>
+                <p>We may also collect limited technical information when you visit this website, such as your browser type, referring page and approximate region. We do not use third-party advertising trackers on this site.</p>
+              </article>
+
+              <article class="privacy-block" id="section-3" data-reveal>
+                <span class="privacy-block-num">N° 03</span>
+                <h2>Cookies</h2>
+                <p>This website uses only essential cookies required for basic functionality. We do not use advertising, tracking or third-party analytics cookies.</p>
+                <p>If we add non-essential cookies in the future (for example, to remember preferences or measure site performance), we will update this policy and provide a way for you to opt out. You can also control cookies through your browser settings at any time.</p>
+                <p>For reference, browsers typically allow you to refuse third-party cookies, delete existing cookies, and be notified when a cookie is being set. Disabling cookies may affect some website features but will not prevent you from contacting us by email or phone.</p>
+              </article>
+
+              <article class="privacy-block" id="section-4" data-reveal>
+                <span class="privacy-block-num">N° 04</span>
+                <h2>Data Usage</h2>
+                <p>We use the information you provide for the following purposes:</p>
+                <ul>
+                  <li>To scope, prepare, review and deliver the agreed service</li>
+                  <li>To respond to enquiries and provide the next practical step</li>
+                  <li>To maintain records of work, milestones and review discussions</li>
+                  <li>To meet legal, regulatory or contractual obligations</li>
+                  <li>To improve our internal processes and service quality</li>
+                </ul>
+                <p>We do not sell, rent or trade your personal information or work material. Research drafts, invention notes, academic files and client details are treated as confidential working material and shared only with team members directly involved in the engagement.</p>
+              </article>
+
+              <article class="privacy-block" id="section-5" data-reveal>
+                <span class="privacy-block-num">N° 05</span>
+                <h2>User Rights</h2>
+                <p>Depending on your location and applicable law, you may have the following rights over your personal information:</p>
+                <ul>
+                  <li><strong>Access</strong> — request a copy of the personal information we hold about you</li>
+                  <li><strong>Correction</strong> — ask us to correct inaccurate or incomplete information</li>
+                  <li><strong>Deletion</strong> — request deletion of your personal information, subject to legal or contractual retention obligations</li>
+                  <li><strong>Restriction</strong> — request that we limit the use of your information in certain circumstances</li>
+                  <li><strong>Portability</strong> — receive your personal information in a structured, machine-readable format</li>
+                  <li><strong>Withdrawal of consent</strong> — withdraw consent for processing at any time, where processing is based on consent</li>
+                </ul>
+                <p>To exercise any of these rights, write to <a href="mailto:admin@jvktech.com">admin@jvktech.com</a>. We will respond within a reasonable timeframe, typically within 30 days.</p>
+              </article>
+
+              <article class="privacy-block" id="section-6" data-reveal>
+                <span class="privacy-block-num">N° 06</span>
+                <h2>Data Protection &amp; Retention</h2>
+                <p>JVK Technologies handles client information for service delivery and communication. We aim to follow applicable Indian data protection rules, including the IT Act 2000 and Digital Personal Data Protection Act 2023, and relevant privacy obligations for international clients where applicable.</p>
+                <p>Client material is retained for as long as necessary to provide the agreed service and meet legal or contractual obligations. After the completion of an engagement, working material may be securely archived for a limited period to allow for follow-up queries, and then deleted unless retention is required by law.</p>
+                <p>While we take reasonable measures to protect client information, no method of transmission or storage is completely secure. We cannot guarantee absolute security, but we work to protect your material using access controls, confidentiality practices and secure communication channels.</p>
+              </article>
+
+              <article class="privacy-block" id="section-7" data-reveal>
+                <span class="privacy-block-num">N° 07</span>
+                <h2>Terms</h2>
+                <ul>
+                  <li><strong>Acceptance of terms</strong> — By accessing this website or engaging JVK Technologies for services, you confirm that you are at least 18 years old or have legal authority to agree to these terms.</li>
+                  <li><strong>Services and delivery</strong> — Services, deliverables, timelines and fees are agreed before work begins. Clients must provide accurate and timely information. Reasonable revisions may be included according to the agreed scope; additional revisions can require extra fees.</li>
+                  <li><strong>Intellectual property</strong> — JVK Technologies retains ownership of proprietary methods and materials. Client-specific deliverables belong to the client after full payment unless a written agreement states otherwise. Clients must ensure that materials they provide do not infringe third-party rights.</li>
+                  <li><strong>Limitation of liability</strong> — JVK Technologies is not responsible for delays or outcomes controlled by third parties, including journals, patent offices or admission bodies. Liability is limited to the amount paid for the specific service, except where liability cannot be excluded under law.</li>
+                  <li><strong>Disputes and governing law</strong> — Disputes are governed by Indian law. Arbitration, where required, will be handled in Gudivada, Andhra Pradesh, India under applicable arbitration law.</li>
+                </ul>
+              </article>
+
+              <article class="privacy-block" id="section-8" data-reveal>
+                <span class="privacy-block-num">N° 08</span>
+                <h2>Contact Information</h2>
+                <p>For questions about this privacy policy, or to exercise any of your rights over your personal information, please contact us:</p>
+                <ul>
+                  <li><a href="mailto:admin@jvktech.com">admin@jvktech.com</a></li>
+
+                  <li><a href="tel:+918500580495">+91 8500580495</a></li>
+                </ul>
+                <p>JVK Technologies<br>Gudivada, Andhra Pradesh<br>India, PIN 521301</p>
+              </article>
+
+            </div>
+          </div>
+        </div>
       </section>
+
+      <!-- ============== CTA ============== -->
+      <section class="cta-band" id="cta">
+        <div class="cta-band-inner">
+          <p class="section-eyebrow" data-reveal>
+            <span class="eyebrow-line"></span>
+            Questions?
+          </p>
+          <h2 class="cta-band-title" data-reveal>
+            Privacy is part of<br>
+            <em>the practice.</em>
+          </h2>
+          <p class="cta-band-lead" data-reveal>
+            If anything in this policy is unclear, or if you would like to discuss how your material will be handled before beginning an engagement, write to us directly.
+          </p>
+          <div class="cta-band-actions" data-reveal>
+            <a href="mailto:admin@jvktech.com" class="btn btn-dark btn-magnetic" data-magnetic>
+              <span>Email the practice</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="contact.html" class="btn btn-ghost btn-magnetic" data-magnetic>
+              <span>Contact page</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
     </main>
+
     <footer class="site-footer">
-      <div><img src="assets/jvk-logo.png" alt="" aria-hidden="true"><p>JVK Technologies, Gudivada, Andhra Pradesh, India, PIN 521301</p></div>
-      <div><a href="mailto:admin@jvktech.com">admin@jvktech.com</a><a href="tel:+918500580495">+91 8500580495</a></div>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand" aria-label="JVK Technologies home">
+              <span class="brand-mark"><img src="assets/jvk-logo.png" alt="JVK Technologies" width="32" height="32"></span>
+              <span class="brand-text"><span class="brand-name">JVK</span><span class="brand-sub">Technologies</span></span>
+            </a>
+            <p class="footer-tagline">The art of scholarly precision — research, publication, patent and technology support from Gudivada, Andhra Pradesh.</p>
+          </div>
+          <div class="footer-cols">
+            <div class="footer-col">
+              <h4>Navigate</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#work">Work</a></li>
+                <li><a href="index.html#process">Process</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="index.html#services">Paper Publications</a></li>
+                <li><a href="index.html#services">Patent Publication</a></li>
+                <li><a href="index.html#services">Copyrights</a></li>
+                <li><a href="index.html#services">Thesis &amp; PhD</a></li>
+                <li><a href="index.html#services">Books &amp; E-Publishing</a></li>
+                <li><a href="index.html#services">Web &amp; Hosting</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Contact</h4>
+              <ul>
+                <li><a href="mailto:admin@jvktech.com">admin@jvktech.com</a></li>
+
+                <li><a href="tel:+918500580495">+91 8500580495</a></li>
+                <li class="footer-address">Gudivada, Andhra Pradesh<br>India, PIN 521301</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-rule"></div>
+        <div class="footer-bottom">
+          <p>&copy; <span id="year">2026</span> JVK Technologies. All rights reserved.</p>
+          <div class="footer-social">
+            <a href="mailto:admin@jvktech.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+            <a href="tel:+918500580495" aria-label="Phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+            <a href="https://books.jvktech.com/" target="_blank" rel="noopener" aria-label="JVK Books"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></a>
+          </div>
+          <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><span>Back to top</span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+        </div>
+      </div>
     </footer>
-    <script src="script.js"></script>
+
+    <!-- Floating contact bubble -->
+    <div class="fab-wrap" id="fabWrap">
+      <div class="fab-options">
+        <a href="https://wa.me/918500580495" target="_blank" rel="noopener" class="fab-option" aria-label="WhatsApp">
+          <svg class="fab-icon-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+        <a href="mailto:admin@jvktech.com" class="fab-option" aria-label="Email">
+          <svg class="fab-icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Gmail</span>
+        </a>
+      </div>
+      <button class="fab-btn" type="button" aria-label="Contact us">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+    </div>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/slider.js" defer></script>
+    <script src="js/contact.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/fab.js" defer></script>
   </body>
 </html>
